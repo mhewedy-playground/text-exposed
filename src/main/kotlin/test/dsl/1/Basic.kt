@@ -1,3 +1,5 @@
+package test.dsl.`1`
+
 import org.jetbrains.exposed.dao.IntIdTable
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.transactions.transaction
@@ -24,7 +26,6 @@ fun main() {
                 City("Bangladish", 20_000),
                 City("Kazablanka", 10_000_000)
             )
-
 
             Cities.batchInsert(cities) {
                 this[Cities.name] = it.name
