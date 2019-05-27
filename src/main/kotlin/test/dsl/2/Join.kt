@@ -17,7 +17,7 @@ fun main() {
             .selectAll()
             .andWhere { Cities.name like "%%" }
             .fetchSize(40)
-            .forEach { println(it) }
+            .forEach { println(it[Users.name]) }
     }
 
 }
