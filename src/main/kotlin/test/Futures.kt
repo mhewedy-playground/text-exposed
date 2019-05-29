@@ -15,8 +15,9 @@ fun getHello(): Promise<String> {
 }
 
 fun main() {
-    val hello = getHello()
-    hello.whenComplete { t, _ -> println(t) }
+    getHello().whenComplete { t, _ ->
+        println(t)
+    }
     println("done calling getHello()")
 
     thread { Thread.sleep(3000) }
